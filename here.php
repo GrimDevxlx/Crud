@@ -11,13 +11,13 @@
     if($query_run )
     {
           $_SESSION['message'] = "Patient Deleted Successfully";
-          header("Location: patient-create.php");
+          header("Location: index.php");
           exit(0);
     }
     else
     {
       $_SESSION['message'] = "Patient Not Deleted";
-      header("Location: patient-create.php");
+      header("Location: index.php");
       exit(0);
     }
   }
