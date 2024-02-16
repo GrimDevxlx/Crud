@@ -41,6 +41,8 @@
                           ?>
                      
                       <form action="here.php" method="POST">
+                          <input type="hidden" name="patient_id" value="<?= $patient['id']; ?>">
+
 
                   <div class="mb-3">
                   <label>Patient Name:</label>

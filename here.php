@@ -10,7 +10,21 @@
     $phone = mysqli_real_escape_string($con, $_POST['phone']);
     $address = mysqli_real_escape_string($con, $_POST['address']);
 
-    $query = "UPDATE SET patients name='$name', email='$email', phone='$phone', address='$address' WHERE id ='$patient_id' ";
+    $query = "UPDATE patients SET name='$name', email='$email', phone='$phone', address='$address' WHERE id ='$patient_id' ";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+      $_SESSION['message'] = "Patients Updated Successfully";
+      header("Location: index.php");
+      exit(0);
+    }
+    else
+    {
+      $_SESSION['message'] = "Patients Not Updated";
+          header("Location: index.php");
+          exit(0);
+    }
   }
 
 
@@ -26,13 +40,13 @@
         $query_run = mysqli_query($con, $query);
         if($query_run)
         {
-          $_SESSION['message'] = "Patients Added Successfully";
+          $_SESSION['message'] = "Patient Added Successfully";
           header("Location: patient-create.php");
           exit(0);
         }
         else
         {
-          $_SESSION['message'] = "Patients Not Added Successfully";
+          $_SESSION['message'] = "Patient Not Added";
           header("Location: patient-create.php");
           exit(0);
         }

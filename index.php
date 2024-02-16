@@ -1,4 +1,5 @@
 <?php 
+  session_start();
   require 'dbcon.php';
 ?>
 <!doctype html>
@@ -15,7 +16,10 @@
   </head>
   <body>
    
-      <div class="container">
+      <div class="container mt-4">
+
+        <?php include('message.php'); ?>
+
         <div class="row">
           <div class="col-md-12">
             <div class="card">
@@ -54,7 +58,7 @@
                                 <td><?=$patient['phone']; ?></td>
                                 <td><?=$patient['address']; ?></td>
                                 <td>
-                                  <a href="" class="btn btn-info btn-sm">Read</a>
+                                  <a href="patient-view.php" class="btn btn-info btn-sm">Read</a>
                                   <a href="patient-edit.php?id=<?= $patient['id']; ?>" class="btn btn-success btn-sm">Edit</a>
                                   <a href="" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
