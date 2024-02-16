@@ -17,12 +17,30 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4>Patient Details</h4>
+                <h4>Patient Details
                 <a href="patient-create.php" class="btn btn-primary float-end">Add Patients</a>
+                </h4>
               </div>
-              <div class="card-body">
-                
-              </div>
+                <div class="card-body">
+
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Patient Name</th>
+                        <th>Patient Email</th>
+                        <th>Patient Phone</th>
+                        <th>Patient Address</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
             </div>
           </div>
         </div>
