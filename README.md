@@ -1,2 +1,0 @@
-# Crud
- php-bootstrap
