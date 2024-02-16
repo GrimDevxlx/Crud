@@ -1,3 +1,6 @@
+<?php 
+  require 'dbcon.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -35,9 +38,37 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                      </tr>
+                      <?php 
+                        $query = "SELECT * FROM patients";
+                        $query_run = mysqli_query($con, $query);
+
+                        if(mysqli_num_rows($query_run) > 0)
+                        {
+                          foreach($query_run as $patient)
+                          {
+                            ?>
+                            <tr>
+                                <td><?=$patient['id']; ?></td>
+                                <td><?=$patient['name']; ?></td>
+                                <td><?=$patient['email']; ?></td>
+                                <td><?=$patient['phone']; ?></td>
+                                <td><?=$patient['address']; ?></td>
+                                <td>
+                                  <a href="" class="btn btn-info btn-sm">View</a>
+                                  <a href="" class="btn btn-success btn-sm">Edit</a>
+                                  <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            <?php
+                            
+                          }
+                        }
+                        else
+                        {
+                          echo "<h5>No Patient Record Found!</h5>";
+                        }
+                      ?>
+                      
                     </tbody>
                   </table>
                 </div>
