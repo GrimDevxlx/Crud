@@ -6,6 +6,20 @@
   {
     $patient_id = mysqli_real_escape_string($con, $_POST['delete_patient']);
     $query = "DELETE FROM patients WHERE id='$patient_id' ";
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run )
+    {
+          $_SESSION['message'] = "Patient Deleted Successfully";
+          header("Location: patient-create.php");
+          exit(0);
+    }
+    else
+    {
+      $_SESSION['message'] = "Patient Not Deleted";
+      header("Location: patient-create.php");
+      exit(0);
+    }
   }
 
 
