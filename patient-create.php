@@ -20,7 +20,31 @@
                 <a href="index.php" class="btn btn-danger float-end">BACK</a>
               </h4>
             </div>
+              <div class="card-body">
+                <form action="" method="POST">
 
+                  <div class="mb-3">
+                  <label>Patient Name:</label>
+                  <input type="text" name="name" placeholder="John doe" class="form-control">
+                  </div>
+                  <div class="mb-3">
+                  <label>Patient Email:</label>
+                  <input type="email" name="email" placeholder="@yahoo/@gmail" class="form-control">
+                  </div>
+                  <div class="mb-3">
+                  <label>Patient Phone:</label>
+                  <input type="text" name="phone"  placeholder="639+" class="form-control">
+                  </div>
+                  <div class="mb-3">
+                  <label>Patient Address:</label>
+                  <input type="text" name="address" placeholder="PHL" class="form-control">
+                  </div>
+                  <div class="mb-3">
+                    <button type="submit" name="save_patient" class="btn btn-primary">Save Patient</button>
+                  </div>
+
+                </form>
+              </div>
           </div>
         </div>
       </div>
