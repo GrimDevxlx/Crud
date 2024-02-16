@@ -54,8 +54,8 @@
                                 <td><?=$patient['phone']; ?></td>
                                 <td><?=$patient['address']; ?></td>
                                 <td>
-                                  <a href="" class="btn btn-info btn-sm">View</a>
-                                  <a href="" class="btn btn-success btn-sm">Edit</a>
+                                  <a href="" class="btn btn-info btn-sm">Read</a>
+                                  <a href="patient-edit.php?id=<?= $patient['id']; ?>" class="btn btn-success btn-sm">Edit</a>
                                   <a href="" class="btn btn-danger btn-sm">Delete</a>
                                 </td>
                             </tr>
