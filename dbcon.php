@@ -1,6 +1,6 @@
 <?php
   
-  $con = mysqli_connect("localhost", "root", "", "nmmc");
+  $con = mysqli_connect("localhost", "root", "", "DBNAME");
   if(!$con) {
     die('Connection Failed'. mysqli_connect_error());
   }
