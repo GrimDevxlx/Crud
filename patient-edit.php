@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require 'dbcon.php';
 ?>
 <!doctype html>
 <html lang="en">
@@ -28,9 +29,11 @@
             </div>
               <div class="card-body">
                   <?php 
-                    if()
+                    if(isset($_GET['id']))
                     {
-                      
+                       $patient_id = mysqli_real_escape_string($con, $_GET['id']);
+                       $query = "SELECT * FROM patients WHERE id ='$patient_id' ";
+                       $query_run = mysqli_query($con, $query);
                     }
                   ?>
 
