@@ -58,9 +58,12 @@
                                 <td><?=$patient['phone']; ?></td>
                                 <td><?=$patient['address']; ?></td>
                                 <td>
-                                  <a href="patient-view.php" class="btn btn-info btn-sm">Read</a>
+                                  <a href="patient-view.php?id=<?= $patient['id']; ?>" class="btn btn-info btn-sm">Read</a>
                                   <a href="patient-edit.php?id=<?= $patient['id']; ?>" class="btn btn-success btn-sm">Edit</a>
-                                  <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                  <form action="here.php" method="POST" class="d-inline">
+                                  <button type="submit" name="delete_patient" value="<?=$patient['id'];?>" 
+                                  class="btn btn-danger btn-sm">Delete</button>
+                                  </form>
                                 </td>
                             </tr>
                             <?php

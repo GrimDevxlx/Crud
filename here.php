@@ -2,6 +2,13 @@
   session_start();
   require 'dbcon.php';
 
+  if(isset($_POST['delete_patient']))
+  {
+    $patient_id = mysqli_real_escape_string($con, $_POST['delete_patient']);
+    $query = "DELETE FROM patients WHERE id='$patient_id' ";
+  }
+
+
   if(isset($_POST['update_patient']))
   {
     $patient_id = mysqli_real_escape_string($con, $_POST['patient_id']);
