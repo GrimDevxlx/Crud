@@ -31,22 +31,22 @@
 
                   <div class="mb-3">
                   <label>Patient Name:</label>
-                  <input type="text" name="name" placeholder="John doe" class="form-control">
+                  <input type="text" name="name" placeholder="John doe" required class="form-control">
                   </div>
                   <div class="mb-3">
                   <label>Patient Email:</label>
-                  <input type="email" name="email" placeholder="@yahoo/@gmail" class="form-control">
+                  <input type="email" name="email" placeholder="@yahoo/@gmail" required class="form-control">
                   </div>
                   <div class="mb-3">
                   <label>Patient Phone:</label>
-                  <input type="text" name="phone"  placeholder="639+" class="form-control">
+                  <input type="text" name="phone"  placeholder="639+" required class="form-control">
                   </div>
                   <div class="mb-3">
                   <label>Patient Address:</label>
-                  <input type="text" name="address" placeholder="PHL" class="form-control">
+                  <input type="text" name="address" placeholder="PHL" required class="form-control">
                   </div>
                   <div class="mb-3">
-                    <button type="submit" name="save_patient" class="btn btn-primary">Save Patient</button>
+                    <button type="submit" name="save_patient" required class="btn btn-primary">Save Patient</button>
                   </div>
 
                 </form>
