@@ -11,7 +11,7 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
         <div class="col-md-12">
           <div class="card">
@@ -21,7 +21,7 @@
               </h4>
             </div>
               <div class="card-body">
-                <form action="" method="POST">
+                <form action="here.php" method="POST">
 
                   <div class="mb-3">
                   <label>Patient Name:</label>
